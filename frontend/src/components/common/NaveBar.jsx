@@ -11,8 +11,9 @@ const NavBar = () => {
         </ul>
         <ul className="headers">
           <li className="links-header">
-            <Link to="/verified">Verified Data</Link>
+            <Link to="/home">Home</Link>
           </li>
+
           <li className="links-header">
             <Link to="/records">Records</Link>
           </li>

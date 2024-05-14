@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../src/components/common/NaveBar";
 import Footer from "../src/components/common/Footer";
 import PersonalDetailForm from "../src/components/PersonalDetailsForm";
-// import PersonalDetail
+import Home from "./components/home";
 import ShowData from "../src/components/StudentRecords";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -11,6 +11,7 @@ const App = () => {
     <Router basename={process.env.PUBLIC_URL}>
       <NavBar />
       <Routes>
+        <Route path="/home" element={<Home />} />
         <Route path="/records" element={<ShowData />} />
         <Route path="/application" element={<PersonalDetailForm />} />
       </Routes>
