@@ -230,8 +230,8 @@ function PersonalDetailForm() {
           onClick={isVerified ? handleSubmit : handleVerify}
         />
       </form>
-      <hr />
-      <p>{submitData}</p>
+      {/* <hr /> */}
+      {/* <p>{submitData}</p> */}
       <StudentTable data={compData} />
     </div>
   );
