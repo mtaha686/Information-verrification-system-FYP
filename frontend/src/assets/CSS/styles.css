@@ -52,6 +52,7 @@ nav {
   color: var(--white);
   text-decoration: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .links-header a:hover {
@@ -78,7 +79,7 @@ nav {
   box-sizing: border-box;
   row-gap: 0px;
   column-gap: 2px;
-  padding: 0px 40px;
+  padding: 0px 0px 0px 50px;
   height: 70vh;
 }
 
@@ -100,7 +101,7 @@ nav {
 .form-group input,
 select {
   width: 100%;
-  padding: 3px;
+  padding: 4px;
   border-radius: 2px;
   font-size: 16px;
   /* color: var(--background-purple); */
@@ -115,6 +116,9 @@ select {
   border-color: var(--background-purple);
   color: #6787f8;
   background-color: #e7eaf7;
+}
+.form-group input[type="file"] {
+  padding: 2px;
 }
 .message-of-input {
   padding: 0;
