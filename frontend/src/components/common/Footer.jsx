@@ -1,7 +1,7 @@
 // Footer.jsx
 
 import React from "react";
-import "../assets/CSS/styles.css";
+import "../../assets/CSS/styles.css";
 
 const Footer = () => {
   return (

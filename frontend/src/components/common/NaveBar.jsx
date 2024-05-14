@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../assets/CSS/styles.css";
-import logo from "../assets/images/logo.svg";
-
+import logo from "../../assets/images/logo.svg";
+import "../../assets/CSS/styles.css";
 const NavBar = () => {
   return (
     <div className="navbar-container">

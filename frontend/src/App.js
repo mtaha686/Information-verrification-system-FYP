@@ -1,8 +1,8 @@
 import React from "react";
-import NavBar from "./NaveBar";
-import Footer from "./Footer";
-import PersonalDetailForm from "./PersonalDetailsForm";
-import ShowData from "./StudentRecords";
+import NavBar from "../src/components/common/NaveBar";
+import Footer from "../src/components/common/Footer";
+import PersonalDetailForm from "../src/components/PersonalDetailsForm";
+import ShowData from "../src/components/StudentRecords";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
