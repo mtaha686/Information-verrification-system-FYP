@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/CSS/styles.css";
+
 const InputField = ({
   label,
   type,
@@ -7,7 +8,7 @@ const InputField = ({
   name,
   placeholder,
   value,
-  pattern,
+  pattern, // Add pattern attribute
   onChange,
   required,
 }) => (
@@ -20,11 +21,10 @@ const InputField = ({
       name={name}
       placeholder={placeholder}
       value={value}
-      pattern={pattern}
+      pattern={pattern} // Include pattern attribute
       onChange={onChange}
       required={required}
     />
-    {/* <p className="message-of-input">for error</p> */}
   </div>
 );
 

@@ -120,6 +120,13 @@ select {
 .form-group input[type="file"] {
   padding: 2px;
 }
+.text-danger {
+  font-size: 0.5em;
+  float: right;
+  margin-left: 43%;
+  margin-top: -15px;
+  padding: 3px;
+}
 .message-of-input {
   padding: 0;
   margin: 0;

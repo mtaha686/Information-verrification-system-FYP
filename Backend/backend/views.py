@@ -42,10 +42,10 @@ def PersonalDetailData(request):
         file_path = 'compared_data.json'
         with open(file_path, 'w') as json_file:
             json.dump(comp_data, json_file, indent=2)
-        # return JsonResponse({'comp_data': comp_data})
-        return JsonResponse({'card_data': id_card_result,
-                             'ssc_data': ssc_result,
-                             'fsc_data': fsc_result, })
+        return JsonResponse({'comp_data': comp_data})
+        # return JsonResponse({'card_data': id_card_result,
+        #                      'ssc_data': ssc_result,
+        #                      'fsc_data': fsc_result, })
 
     return JsonResponse({'error': 'huahahahahahah'})
 

@@ -10,7 +10,7 @@
     "fname": true,
     "obtained": true,
     "total": true,
-    "year": true,
+    "year": false,
     "roll_no": true,
     "board": {
       "board": "board",

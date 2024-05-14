@@ -103,7 +103,7 @@ function PersonalDetailForm() {
         />
 
         <FileUploadField
-          label="Upload Image (CNIC)"
+          label="CNIC image"
           id="cnicUpload"
           name="cnicUpload"
           onChange={handleFileChange}
@@ -112,23 +112,21 @@ function PersonalDetailForm() {
         {/* matric part */}
         <InputField
           label="Obtained Marks (SSC)"
-          type="digits"
+          type="text"
           id="sscObtained"
           name="sscObtained"
           placeholder="Enter obtained marks (SSC)"
           value={formData.sscObtained}
           onChange={handleInputChange}
-          min={0}
-          max={1100}
+          pattern="^(?:\d{3,4}|1100)$"
           required
         />
         <InputField
           label="Total Marks (SSC)"
-          type="number"
+          type="text"
           id="sscTotal"
           name="sscTotal"
-          min={0}
-          max={1100}
+          pattern="^(?:\d{3,4}|1100)$"
           placeholder="Enter Total Marks (SSC)"
           value={formData.sscTotal}
           onChange={handleInputChange}
@@ -155,38 +153,40 @@ function PersonalDetailForm() {
         />
         <InputField
           label="Roll No (SSC)"
-          type="number"
+          type="text"
           id="ssc_rno"
           name="ssc_rno"
           placeholder="Enter Roll no (SSC)"
           value={formData.ssc_rno}
           onChange={handleInputChange}
-          min={0}
-          max={1100}
+          pattern="^\d{6}$"
           required
         />
         <FileUploadField
-          label="Upload MarkSheet (SSC)"
+          label="MarkSheet (SSC)"
           id="sscUpload"
           name="sscUpload"
+          accept=".JPEG, .PNG, .JPG"
           onChange={handleFileChange}
         />
         <InputField
           label="Obtained Marks (FSC)"
-          type="number"
+          type="text"
           id="fscObtained"
           name="fscObtained"
           placeholder="Enter obtained marks (FSC)"
+          pattern="^(?:\d{3,4}|1100)$"
           value={formData.fscObtained}
           onChange={handleInputChange}
           required
         />
         <InputField
           label="Total Marks (FSC)"
-          type="number"
+          type="text"
           id="fscTotal"
           name="fscTotal"
           placeholder="Enter Total Marks (FSC)"
+          pattern="^(?:\d{3,4}|1100)$"
           value={formData.fscTotal}
           onChange={handleInputChange}
           required
@@ -211,16 +211,17 @@ function PersonalDetailForm() {
         />
         <InputField
           label="Roll No (FSC)"
-          type="number"
+          type="text"
           id="fsc_rno"
           name="fsc_rno"
           placeholder="Enter Roll no (FSC)"
+          pattern="^\d{6}$"
           value={formData.fsc_rno}
           onChange={handleInputChange}
           required
         />
         <FileUploadField
-          label="Upload MarkSheet (FSC)"
+          label="MarkSheet (FSC)"
           id="fscUpload"
           name="fscUpload"
           onChange={handleFileChange}
