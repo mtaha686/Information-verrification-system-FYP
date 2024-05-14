@@ -1,0 +1,43 @@
+{
+  "card_data": {
+    "name": true,
+    "fname": true,
+    "dob": false,
+    "cinc": false
+  },
+  "ssc_data": {
+    "name": true,
+    "fname": true,
+    "obtained": true,
+    "total": true,
+    "year": true,
+    "roll_no": true,
+    "board": {
+      "board": "board",
+      "of": "of",
+      "intermediate": "intermediate",
+      "and": "and",
+      "secondary": "secondary",
+      "education": "education",
+      "rawalpindi": "rawalpindi"
+    }
+  },
+  "fsc_data": {
+    "name": true,
+    "fname": true,
+    "obtained": true,
+    "total": true,
+    "year": true,
+    "roll_no": true,
+    "board": {
+      "federal": "False",
+      "board": "board",
+      "of": "of",
+      "intermediate": "intermediate",
+      "and": "and",
+      "secondary": "secondary",
+      "education": "education",
+      "islamabad": "islamabad"
+    }
+  }
+}

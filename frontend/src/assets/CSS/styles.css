@@ -1,0 +1,166 @@
+/* styles.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+:root {
+  --background-purple: #9757f8;
+  --white: #ffffff;
+  --analogous-color-1: #8767f8;
+  --analogous-color-2: #7777f8;
+  --analogous-color-3: #6787f8;
+  --complementary-color: #f85757;
+  --split-complementary-1: #f8576a;
+  --split-complementary-2: #f85757;
+  --triadic-color-1: #f85757;
+  --triadic-color-2: #57f857;
+}
+
+.navbar-container {
+  background-color: var(--background-purple);
+  padding: 10px 20px;
+}
+
+/* NavBar Styles */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.headers {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding-right: 30px;
+}
+
+.links-header a {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.links-header a:hover {
+  color: rgb(231, 212, 0);
+  transform: scale(1.05);
+}
+
+/* HomePage Styles */
+
+.home-container {
+  padding: 20px;
+  height: 80vh;
+  background-color: var(--background-purple);
+}
+
+/* styles.css */
+.main-form-container {
+  padding: 1px;
+  /* height: 70vh; */
+}
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-sizing: border-box;
+  row-gap: 0px;
+  column-gap: 2px;
+  padding: 0px 40px;
+  height: 70vh;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 1px;
+  padding: 3px;
+}
+.form-group label {
+  font-weight: bold;
+  font-size: 0.7em;
+  padding: 1px 0;
+  display: flex;
+  justify-content: space-between;
+  color: var(--background-purple);
+}
+.form-group input,
+select {
+  width: 100%;
+  padding: 3px;
+  border-radius: 2px;
+  font-size: 16px;
+  /* color: var(--background-purple); */
+  border: 1.5px solid var(--background-purple);
+}
+.form-group input:hover,
+.form-group input:focus {
+  border-color: var(--background-purple);
+  background-color: #e7eaf7;
+}
+.form-group input[type="select"] {
+  border-color: var(--background-purple);
+  color: #6787f8;
+  background-color: #e7eaf7;
+}
+.message-of-input {
+  padding: 0;
+  margin: 0;
+  font-size: 0.5 em;
+}
+.comparison-message {
+  padding: 0;
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: bold !important;
+  color: red;
+}
+/* ButtonComponent.css */
+
+.buttonSubmit {
+  text-align: center;
+  border-radius: 5px;
+  text-align: center;
+  border-color: var(--analogous-color-1);
+  background-color: none;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  width: 70%;
+  height: 40px;
+  margin-top: 20px;
+  border: 2px solid var(--analogous);
+  background-color: var(--analogous-color-1);
+}
+@media (max-width: 768px) {
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* footer contaier */
+.footer-container {
+  background-color: var(--background-purple);
+  color: var(--white);
+  text-align: center;
+  padding: 17px;
+  bottom: 0;
+  width: 100%;
+  /* position: fixed; */
+}
+
+/* StudentTable.css */
+/* styles.css */
