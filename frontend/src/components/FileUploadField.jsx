@@ -22,9 +22,10 @@ const FileUploadField = ({ label, id, name, accept, onChange }) => {
 
   return (
     <div className="form-group">
-      <label htmlFor={id}>{label}</label>
-      {errorMessage && <div className="text-danger">{errorMessage}</div>}
-
+      <label htmlFor={id}>
+        {label}
+        {errorMessage && <p className="comparison-message">{errorMessage}</p>}
+      </label>
       <div className="custom-file">
         <input
           type="file"

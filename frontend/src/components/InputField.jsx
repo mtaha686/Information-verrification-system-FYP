@@ -2,6 +2,7 @@ import React from "react";
 import "../assets/CSS/styles.css";
 
 const InputField = ({
+  data,
   label,
   type,
   id,
@@ -13,7 +14,10 @@ const InputField = ({
   required,
 }) => (
   <div className="form-group">
-    <label htmlFor={id}>{label}</label>
+    <label htmlFor={id}>
+      {label}{" "}
+      {data === false && <p className="comparison-message"> not matched</p>}
+    </label>
     <input
       type={type}
       className="form-control"

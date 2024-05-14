@@ -1,6 +1,7 @@
 import React from "react";
 
 const SelectField = ({
+  data,
   label,
   id,
   name,
@@ -10,7 +11,12 @@ const SelectField = ({
   required,
 }) => (
   <div className="form-group">
-    <label htmlFor={id}>{label}</label>
+    <label htmlFor={id}>
+      {label}
+      {data === false && (
+        <p className="comparison-message"> {data} not matched</p>
+      )}
+    </label>
     <select
       name={name}
       id={id}
@@ -23,8 +29,7 @@ const SelectField = ({
           {option.label}
         </option>
       ))}
-    </select>
-    {/* <p className="message-of-input">for error</p> */}
+    </select>{" "}
   </div>
 );
 

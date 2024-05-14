@@ -16,7 +16,7 @@ function PersonalDetailForm() {
   const { formData, handleInputChange, handleFileChange } =
     usePersonalDetailsForm();
   const [compData, setCompData] = useState(null);
-  const [submitData, setSubmitData] = useState(null);
+  const [, setSubmitData] = useState(null);
   const isVerified =
     compData &&
     compData.card_data.name &&
@@ -60,6 +60,7 @@ function PersonalDetailForm() {
         onSubmit={isVerified ? handleSubmit : handleVerify}
       >
         <InputField
+          data={compData && compData.card_data.name}
           label="Name"
           type="text"
           id="name"
@@ -70,6 +71,7 @@ function PersonalDetailForm() {
           required
         />
         <InputField
+          data={compData && compData.card_data.fname}
           label="Father's Name"
           type="text"
           id="fatherName"
@@ -80,6 +82,7 @@ function PersonalDetailForm() {
           required
         />
         <InputField
+          data={compData && compData.card_data.cnic_number}
           label="CNIC"
           type="text"
           id="cnic"
@@ -92,6 +95,7 @@ function PersonalDetailForm() {
         />
 
         <InputField
+          data={compData && compData.card_data.dob}
           label="Date of Birth"
           type="date"
           id="dob"
@@ -111,6 +115,7 @@ function PersonalDetailForm() {
 
         {/* matric part */}
         <InputField
+          data={compData && compData.ssc_data.obtained}
           label="Obtained Marks (SSC)"
           type="text"
           id="sscObtained"
@@ -122,6 +127,7 @@ function PersonalDetailForm() {
           required
         />
         <InputField
+          data={compData && compData.ssc_data.total}
           label="Total Marks (SSC)"
           type="text"
           id="sscTotal"
@@ -134,6 +140,7 @@ function PersonalDetailForm() {
         />
 
         <SelectField
+          data={compData && compData.ssc_data.year}
           label="Passing Year"
           id="ssc_py"
           name="ssc_py"
@@ -143,6 +150,7 @@ function PersonalDetailForm() {
           required
         />
         <SelectField
+          data={compData && compData.ssc_data.total} //change it later
           label="Borad (SSC)"
           id="ssc_board"
           name="ssc_board"
@@ -152,6 +160,7 @@ function PersonalDetailForm() {
           required
         />
         <InputField
+          data={compData && compData.ssc_data.roll_no}
           label="Roll No (SSC)"
           type="text"
           id="ssc_rno"
@@ -170,6 +179,7 @@ function PersonalDetailForm() {
           onChange={handleFileChange}
         />
         <InputField
+          data={compData && compData.fsc_data.obtained}
           label="Obtained Marks (FSC)"
           type="text"
           id="fscObtained"
@@ -181,6 +191,7 @@ function PersonalDetailForm() {
           required
         />
         <InputField
+          data={compData && compData.fsc_data.total}
           label="Total Marks (FSC)"
           type="text"
           id="fscTotal"
@@ -192,6 +203,7 @@ function PersonalDetailForm() {
           required
         />
         <SelectField
+          data={compData && compData.fsc_data.year}
           label="Passing Year (FSC)"
           id="fsc_py"
           name="fsc_py"
@@ -201,6 +213,7 @@ function PersonalDetailForm() {
           required
         />
         <SelectField
+          data={compData && compData.fsc_data.total} // change it later
           label="Board (FSC)"
           id="fsc_board"
           name="fsc_board"
@@ -210,6 +223,7 @@ function PersonalDetailForm() {
           required
         />
         <InputField
+          data={compData && compData.fsc_data.roll_no}
           label="Roll No (FSC)"
           type="text"
           id="fsc_rno"
