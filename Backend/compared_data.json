@@ -1,7 +1,7 @@
 {
   "card_data": {
-    "name": false,
-    "fname": false,
+    "name": true,
+    "fname": true,
     "dob": false,
     "cinc_number": false
   },
