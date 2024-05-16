@@ -247,7 +247,7 @@ function PersonalDetailForm() {
       </form>
       {/* <hr /> */}
       {/* <p>{submitData}</p> */}
-      <StudentTable data={compData} />
+      {/* <StudentTable data={compData} /> */}
     </div>
   );
 }

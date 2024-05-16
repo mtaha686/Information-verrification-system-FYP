@@ -6,26 +6,11 @@
     "cinc_number": false
   },
   "ssc_data": {
-    "name": false,
+    "name": true,
     "fname": true,
-    "obtained": false,
-    "total": true,
-    "year": true,
-    "roll_no": false,
-    "board": {
-      "board": "board",
-      "of": "of",
-      "intermediate": "intermediate",
-      "education": "education",
-      "karachi": "False"
-    }
-  },
-  "fsc_data": {
-    "name": false,
-    "fname": false,
     "obtained": true,
     "total": true,
-    "year": false,
+    "year": true,
     "roll_no": true,
     "board": {
       "board": "board",
@@ -34,7 +19,25 @@
       "and": "and",
       "secondary": "secondary",
       "education": "education",
-      "abbottabad": "False"
+      "rawalpindi": "rawalpindi"
+    }
+  },
+  "fsc_data": {
+    "name": true,
+    "fname": true,
+    "obtained": true,
+    "total": true,
+    "year": true,
+    "roll_no": true,
+    "board": {
+      "federal": "False",
+      "board": "board",
+      "of": "of",
+      "intermediate": "intermediate",
+      "and": "and",
+      "secondary": "secondary",
+      "education": "education",
+      "islamabad": "islamabad"
     }
   }
 }
