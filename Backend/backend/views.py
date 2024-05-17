@@ -57,7 +57,6 @@ def extract_form_data(request):
         'father_name': request.POST.get('fatherName'),
         'cnic': request.POST.get('cnic'),
         'dob': request.POST.get('dob'),
-        'gender': request.POST.get('gender'),
         'cnicUpload': request.FILES.get('cnicUpload'),
 
         'sscObtained': request.POST.get('sscObtained'),
