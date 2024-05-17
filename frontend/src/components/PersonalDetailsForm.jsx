@@ -16,22 +16,10 @@ function PersonalDetailForm() {
   const { formData, handleInputChange, handleFileChange } =
     usePersonalDetailsForm();
   const [compData, setCompData] = useState(null);
-  const [, setSubmitData] = useState(null);
+  const [submitData, setSubmitData] = useState(null);
+
   const isVerified =
-    compData &&
-    compData.card_data.name &&
-    compData.ssc_data.name &&
-    compData.fsc_data.name &&
-    compData.ssc_data.obtained &&
-    compData.ssc_data.total &&
-    compData.ssc_data.year &&
-    compData.ssc_data.roll_no &&
-    compData.fsc_data.obtained &&
-    compData.fsc_data.total &&
-    compData.fsc_data.year &&
-    compData.fsc_data.roll_no
-      ? true
-      : false;
+    compData && compData.card_data && compData.ssc_data && compData.fsc_data;
 
   const handleVerify = async (e) => {
     e.preventDefault();
@@ -42,6 +30,7 @@ function PersonalDetailForm() {
       console.log(error);
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -247,7 +236,7 @@ function PersonalDetailForm() {
       </form>
       {/* <hr /> */}
       {/* <p>{submitData}</p> */}
-      {/* <StudentTable data={compData} /> */}
+      {submitData && <StudentTable data={submitData} />}
     </div>
   );
 }

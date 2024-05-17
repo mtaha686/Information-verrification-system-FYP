@@ -11,7 +11,7 @@ const App = () => {
     <Router basename={process.env.PUBLIC_URL}>
       <NavBar />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        {/* <Route path="/home" element={<Home />} /> */}
         <Route path="/records" element={<ShowData />} />
         <Route path="/application" element={<PersonalDetailForm />} />
       </Routes>

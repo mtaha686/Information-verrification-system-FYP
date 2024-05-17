@@ -12,41 +12,25 @@ const StudentDetailsTable = ({ students }) => {
             <tr>
               <th style={{ width: "50%" }}>Name:</th>
               <td style={{ width: "50%" }}>{student.name}</td>
-            </tr>
-            <tr>
               <th style={{ width: "50%" }}>Father's Name:</th>
               <td style={{ width: "50%" }}>{student.father_name}</td>
-            </tr>
-            <tr>
               <th style={{ width: "50%" }}>CNIC:</th>
               <td style={{ width: "50%" }}>{student.cnic}</td>
             </tr>
+
             <tr>
               <th style={{ width: "50%" }}>Date of Birth:</th>
               <td style={{ width: "50%" }}>{student.dob}</td>
-            </tr>
-            <tr>
-              <th style={{ width: "50%" }}>Gender:</th>
-              <td style={{ width: "50%" }}>{student.gender}</td>
-            </tr>
-
-            <tr>
               <th style={{ width: "50%" }}>SSC Obtained:</th>
               <td style={{ width: "50%" }}>{student.ssc_obtained}</td>
-            </tr>
-            <tr>
               <th style={{ width: "50%" }}>SSC Total:</th>
               <td style={{ width: "50%" }}>{student.ssc_total}</td>
             </tr>
             <tr>
               <th style={{ width: "50%" }}>SSC Passing Year:</th>
               <td style={{ width: "50%" }}>{student.ssc_passing_year}</td>
-            </tr>
-            <tr>
               <th style={{ width: "50%" }}>SSC Board:</th>
               <td style={{ width: "50%" }}>{student.ssc_board}</td>
-            </tr>
-            <tr>
               <th style={{ width: "50%" }}>SSC Roll No:</th>
               <td style={{ width: "50%" }}>{student.ssc_roll_no}</td>
             </tr>
@@ -54,59 +38,52 @@ const StudentDetailsTable = ({ students }) => {
             <tr>
               <th style={{ width: "50%" }}>FSC Obtained:</th>
               <td style={{ width: "50%" }}>{student.fsc_obtained}</td>
-            </tr>
-            <tr>
               <th style={{ width: "50%" }}>FSC Total:</th>
               <td style={{ width: "50%" }}>{student.fsc_total}</td>
-            </tr>
-            <tr>
               <th style={{ width: "50%" }}>FSC Passing Year:</th>
               <td style={{ width: "50%" }}>{student.fsc_passing_year}</td>
             </tr>
             <tr>
               <th style={{ width: "50%" }}>FSC Board:</th>
               <td style={{ width: "50%" }}>{student.fsc_board}</td>
-            </tr>
-            <tr>
               <th style={{ width: "50%" }}>FSC Roll No:</th>
               <td style={{ width: "50%" }}>{student.fsc_roll_no}</td>
             </tr>
-
             <tr>
-              <th style={{ width: "50%" }}>CNIC Image:</th>
-              <td colSpan="2" style={{ width: "50%" }}>
+              <th style={{ width: "50%" }}>ID Card:</th>
+              <td style={{ width: "50%" }}>
                 {student.cnic_upload && (
-                  <img
-                    src={`http://127.0.0.1:8000${student.cnic_upload}`}
-                    alt={`Image of ${student.name}`}
-                    style={{ maxWidth: "100px", maxHeight: "100px" }}
-                  />
+                  <a
+                    href={`http://127.0.0.1:8000${student.cnic_upload}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View CNIC
+                  </a>
                 )}
               </td>
-            </tr>
-
-            <tr>
-              <th style={{ width: "50%" }}>SSC Upload:</th>
-              <td colSpan="2" style={{ width: "50%" }}>
+              <th style={{ width: "50%" }}>FSC MS:</th>
+              <td style={{ width: "50%" }}>
                 {student.ssc_upload && (
-                  <img
-                    src={`http://127.0.0.1:8000${student.ssc_upload}`}
-                    alt={`SSC MarkSheet of ${student.name}`}
-                    style={{ maxWidth: "100px", maxHeight: "100px" }}
-                  />
+                  <a
+                    href={`http://127.0.0.1:8000${student.ssc_upload}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View SSC MarkSheet
+                  </a>
                 )}
               </td>
-            </tr>
-
-            <tr>
-              <th style={{ width: "50%" }}>FSC Upload:</th>
-              <td colSpan="2" style={{ width: "50%" }}>
+              <th style={{ width: "50%" }}>FSC MS:</th>
+              <td style={{ width: "50%" }}>
                 {student.fsc_upload && (
-                  <img
-                    src={`http://127.0.0.1:8000${student.fsc_upload}`}
-                    alt={`FSC MarkSheet of ${student.name}`}
-                    style={{ maxWidth: "100px", maxHeight: "100px" }}
-                  />
+                  <a
+                    href={`http://127.0.0.1:8000${student.fsc_upload}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View FSC MarkSheet
+                  </a>
                 )}
               </td>
             </tr>
