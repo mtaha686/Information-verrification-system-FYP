@@ -38,9 +38,6 @@ export const submitPersonalDetails = async (formData) => {
     const response = await fetch(API_URL_SubmitDetails, {
       method: "POST",
       body: formDataObj,
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
     });
 
     if (!response.ok) {
