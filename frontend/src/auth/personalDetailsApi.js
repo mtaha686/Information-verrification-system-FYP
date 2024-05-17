@@ -40,13 +40,13 @@ export const submitPersonalDetails = async (formData) => {
     formDataObj.append("ssc_obtained", formData.sscObtained);
     formDataObj.append("ssc_total", formData.sscTotal);
     formDataObj.append("ssc_passing_year", formData.ssc_py);
-    formDataObj.append("ssc_board", formData.ssc_board); // Ensure max 50 characters
+    formDataObj.append("ssc_board", formData.ssc_board.substring(0, 500)); // Ensure max 50 characters
     formDataObj.append("ssc_roll_no", formData.ssc_rno);
     formDataObj.append("ssc_upload", formData.sscUpload);
     formDataObj.append("fsc_obtained", formData.fscObtained);
     formDataObj.append("fsc_total", formData.fscTotal);
     formDataObj.append("fsc_passing_year", formData.fsc_py);
-    formDataObj.append("fsc_board", formData.fsc_board); // Ensure max 50 characters
+    formDataObj.append("fsc_board", formData.fsc_board.substring(0, 500)); // Ensure max 50 characters
     formDataObj.append("fsc_roll_no", formData.fsc_rno);
     formDataObj.append("fsc_upload", formData.fscUpload);
 
