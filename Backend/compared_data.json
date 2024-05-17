@@ -1,17 +1,17 @@
 {
   "card_data": {
-    "name": false,
-    "fname": false,
+    "name": true,
+    "fname": true,
     "dob": false,
     "cinc_number": false
   },
   "ssc_data": {
-    "name": false,
-    "fname": false,
-    "obtained": false,
+    "name": true,
+    "fname": true,
+    "obtained": true,
     "total": true,
-    "year": false,
-    "roll_no": false,
+    "year": true,
+    "roll_no": true,
     "board": {
       "inter": "False",
       "board": "board",
@@ -23,12 +23,12 @@
     }
   },
   "fsc_data": {
-    "name": false,
-    "fname": false,
-    "obtained": false,
+    "name": true,
+    "fname": true,
+    "obtained": true,
     "total": true,
-    "year": false,
-    "roll_no": false,
+    "year": true,
+    "roll_no": true,
     "board": {
       "federal": "False",
       "board": "board",
@@ -37,7 +37,7 @@
       "and": "and",
       "secondary": "secondary",
       "education": "education",
-      "islamabad": "False"
+      "islamabad": "islamabad"
     }
   }
 }
