@@ -237,3 +237,17 @@ select {
 
 /* StudentTable.css */
 /* styles.css */
+.sec2-data {
+  color: #9757f8;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0;
+  text-decoration: none;
+}
+
+.sec2-lable {
+  display: block;
+  font-weight: normal;
+  /* color: blue; */
+}

@@ -1,100 +1,122 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { getPersonalDetails } from "../auth/personalDetailsApi";
+import "../assets/CSS/styles.css";
 
-const StudentDetailsTable = ({ students }) => {
+const StudentDetailsCard = ({ student }) => {
   return (
-    <table className="table table-striped">
-      <tbody>
-        {students.map((student) => (
-          <React.Fragment key={student.id}>
-            {/* Existing rows */}
-            <tr>
-              <th style={{ width: "50%" }}>Name:</th>
-              <td style={{ width: "50%" }}>{student.name}</td>
-              <th style={{ width: "50%" }}>Father's Name:</th>
-              <td style={{ width: "50%" }}>{student.father_name}</td>
-              <th style={{ width: "50%" }}>CNIC:</th>
-              <td style={{ width: "50%" }}>{student.cnic}</td>
-            </tr>
-
-            <tr>
-              <th style={{ width: "50%" }}>Date of Birth:</th>
-              <td style={{ width: "50%" }}>{student.dob}</td>
-              <th style={{ width: "50%" }}>SSC Obtained:</th>
-              <td style={{ width: "50%" }}>{student.ssc_obtained}</td>
-              <th style={{ width: "50%" }}>SSC Total:</th>
-              <td style={{ width: "50%" }}>{student.ssc_total}</td>
-            </tr>
-            <tr>
-              <th style={{ width: "50%" }}>SSC Passing Year:</th>
-              <td style={{ width: "50%" }}>{student.ssc_passing_year}</td>
-              <th style={{ width: "50%" }}>SSC Board:</th>
-              <td style={{ width: "50%" }}>{student.ssc_board}</td>
-              <th style={{ width: "50%" }}>SSC Roll No:</th>
-              <td style={{ width: "50%" }}>{student.ssc_roll_no}</td>
-            </tr>
-
-            <tr>
-              <th style={{ width: "50%" }}>FSC Obtained:</th>
-              <td style={{ width: "50%" }}>{student.fsc_obtained}</td>
-              <th style={{ width: "50%" }}>FSC Total:</th>
-              <td style={{ width: "50%" }}>{student.fsc_total}</td>
-              <th style={{ width: "50%" }}>FSC Passing Year:</th>
-              <td style={{ width: "50%" }}>{student.fsc_passing_year}</td>
-            </tr>
-            <tr>
-              <th style={{ width: "50%" }}>FSC Board:</th>
-              <td style={{ width: "50%" }}>{student.fsc_board}</td>
-              <th style={{ width: "50%" }}>FSC Roll No:</th>
-              <td style={{ width: "50%" }}>{student.fsc_roll_no}</td>
-            </tr>
-            <tr>
-              <th style={{ width: "50%" }}>ID Card:</th>
-              <td style={{ width: "50%" }}>
-                {student.cnic_upload && (
-                  <a
-                    href={`http://127.0.0.1:8000${student.cnic_upload}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View CNIC
-                  </a>
-                )}
-              </td>
-              <th style={{ width: "50%" }}>FSC MS:</th>
-              <td style={{ width: "50%" }}>
-                {student.ssc_upload && (
-                  <a
-                    href={`http://127.0.0.1:8000${student.ssc_upload}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View SSC MarkSheet
-                  </a>
-                )}
-              </td>
-              <th style={{ width: "50%" }}>FSC MS:</th>
-              <td style={{ width: "50%" }}>
-                {student.fsc_upload && (
-                  <a
-                    href={`http://127.0.0.1:8000${student.fsc_upload}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View FSC MarkSheet
-                  </a>
-                )}
-              </td>
-            </tr>
-          </React.Fragment>
-        ))}
-      </tbody>
-    </table>
+    <div className="card-body align-items-center justify-content-center">
+      <div className="row"></div>
+      <div className="row">
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">Father's Name</label>
+          <p className="sec2-data text-blue fw-bold">{student.father_name}</p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">CNIC</label>
+          <p className="sec2-data text-blue fw-bold">{student.cnic}</p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">DOB</label>
+          <p className="sec2-data text-blue fw-bold">{student.dob}</p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">SSC Obtained</label>
+          <p className="sec2-data text-blue fw-bold">{student.ssc_obtained}</p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">SSC Total</label>
+          <p className="sec2-data text-blue fw-bold">{student.ssc_total}</p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">SSC Passing Year</label>
+          <p className="sec2-data text-blue fw-bold">
+            {student.ssc_passing_year}
+          </p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">SSC Roll no</label>
+          <p className="sec2-data text-blue fw-bold">{student.ssc_roll_no}</p>
+        </div>
+        <div className="col-md-8 mb-2">
+          <label className="sec2-lable">SSC Board</label>
+          <p className="sec2-data text-blue fw-bold">{student.ssc_board}</p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">FSC Obtained</label>
+          <p className="sec2-data text-blue fw-bold">{student.fsc_obtained}</p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">FSC Total</label>
+          <p className="sec2-data text-blue fw-bold">{student.fsc_total}</p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">FSC Passing Year</label>
+          <p className="sec2-data text-blue fw-bold">
+            {student.fsc_passing_year}
+          </p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">FSC Roll No</label>
+          <p className="sec2-data text-blue fw-bold">{student.fsc_roll_no}</p>
+        </div>
+        <div className="col-md-8 mb-2">
+          <label className="sec2-lable">FSC Board</label>
+          <p className="sec2-data text-blue fw-bold">{student.fsc_board}</p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">CNIC Upload</label>
+          <p className="sec2-data  fw-bold" style={{ color: "#9757f8" }}>
+            {student.cnic_upload && (
+              <a
+                href={`http://127.0.0.1:8000${student.cnic_upload}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View CNIC Image
+              </a>
+            )}
+          </p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">SSC Upload</label>
+          <p className="sec2-data text-blue fw-bold">
+            {student.ssc_upload && (
+              <a
+                href={`http://127.0.0.1:8000${student.ssc_upload}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View SSC Marksheet
+              </a>
+            )}
+          </p>
+        </div>
+        <div className="col-md-4 mb-2">
+          <label className="sec2-lable">FSC Upload</label>
+          <p className="sec2-data  fw-bold">
+            {student.fsc_upload && (
+              <a
+                href={`http://127.0.0.1:8000${student.fsc_upload}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View FSC Marksheet
+              </a>
+            )}
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
-// Use StudentDetailsTable component in your ShowData component
 const ShowData = () => {
   const [students, setStudents] = useState([]);
 
@@ -113,17 +135,21 @@ const ShowData = () => {
 
   return (
     <div className="container mt-4">
-      <div
-        className="card border-primary mb-3"
-        style={{ borderRadius: "15px", backgroundColor: "#f0f0f0" }}
-      >
-        <div className="card-header bg-primary text-white">
-          <h5 className="card-title">Student Details</h5>
+      {students.map((student) => (
+        <div
+          className="card  mb-3"
+          style={{ borderRadius: "15px" }}
+          key={student.id}
+        >
+          <div
+            className="card-header text-white"
+            style={{ backgroundColor: "#9757f8" }}
+          >
+            <h5 className="card-title">{student.name}</h5>
+          </div>
+          <StudentDetailsCard student={student} />
         </div>
-        <div className="card-body">
-          <StudentDetailsTable students={students} />
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
