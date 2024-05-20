@@ -10,14 +10,14 @@ import FileUploadField from "../components/FileUploadField";
 import SelectField from "../components/SelectField"; // Import the new component
 import { BoardsOptions, YearList } from "./data";
 import SubmitButton from "./button";
-import StudentTable from "./PersonalDetailsTable";
+import { Alert } from "react-bootstrap";
 
 function PersonalDetailForm() {
   const { formData, handleInputChange, handleFileChange } =
     usePersonalDetailsForm();
   const [compData, setCompData] = useState(null);
   const [submitData, setSubmitData] = useState(null);
-
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const isVerified =
     compData &&
     compData.card_data.name &&
@@ -45,11 +45,16 @@ function PersonalDetailForm() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(formData);
     try {
       const submittedData = await submitPersonalDetails(formData);
       setSubmitData(submittedData);
+      console.log(submitData);
+      setIsSubmitted(true);
       console.log("Submitted Data:", submittedData);
+
+      // Reset the form values
+      setCompData(null); // Reset compData
     } catch (error) {
       console.error(error);
     }
@@ -57,6 +62,15 @@ function PersonalDetailForm() {
 
   return (
     <div className="main-form-container">
+      {isSubmitted && (
+        <Alert
+          variant="success"
+          onClose={() => setIsSubmitted(false)}
+          dismissible
+        >
+          Form submitted successfully!
+        </Alert>
+      )}
       <form
         className="form-container"
         onSubmit={isVerified ? handleSubmit : handleVerify}
@@ -247,8 +261,7 @@ function PersonalDetailForm() {
           onClick={isVerified ? handleSubmit : handleVerify}
         />
       </form>
-      {/* <hr /> */}
-      {/* <p>{submitData}</p> */}
+
       {/* {submitData && <StudentTable data={submitData} />} */}
     </div>
   );
