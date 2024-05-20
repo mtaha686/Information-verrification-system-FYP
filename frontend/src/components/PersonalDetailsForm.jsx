@@ -19,7 +19,20 @@ function PersonalDetailForm() {
   const [submitData, setSubmitData] = useState(null);
 
   const isVerified =
-    compData && compData.card_data && compData.ssc_data && compData.fsc_data;
+    compData &&
+    compData.card_data.name &&
+    compData.ssc_data.name &&
+    compData.fsc_data.name &&
+    compData.ssc_data.obtained &&
+    compData.ssc_data.total &&
+    compData.ssc_data.year &&
+    compData.ssc_data.roll_no &&
+    compData.fsc_data.obtained &&
+    compData.fsc_data.total &&
+    compData.fsc_data.year &&
+    compData.fsc_data.roll_no
+      ? true
+      : false;
 
   const handleVerify = async (e) => {
     e.preventDefault();

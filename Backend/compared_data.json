@@ -3,7 +3,7 @@
     "name": true,
     "fname": true,
     "dob": false,
-    "cinc_number": false
+    "cnic_number": false
   },
   "ssc_data": {
     "name": true,
@@ -13,13 +13,13 @@
     "year": true,
     "roll_no": true,
     "board": {
-      "inter": "False",
       "board": "board",
-      "committee": "False",
       "of": "of",
-      "chairman": "False",
-      "ibcc": "False",
-      "islamabad": "False"
+      "intermediate": "intermediate",
+      "and": "and",
+      "secondary": "secondary",
+      "education": "education",
+      "rawalpindi": "rawalpindi"
     }
   },
   "fsc_data": {

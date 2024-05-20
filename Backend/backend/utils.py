@@ -149,7 +149,7 @@ def process_card_data(form_data, id_card_data, id_card_tokens,):
         'name': all(name_match.values()),
         'fname': all(fname_match.values()),
         'dob': dob_match,
-        'cinc_number': cnic_match,
+        'cnic_number': cnic_match,
     }
     return result_dict
 
