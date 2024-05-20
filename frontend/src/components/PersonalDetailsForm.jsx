@@ -236,7 +236,7 @@ function PersonalDetailForm() {
       </form>
       {/* <hr /> */}
       {/* <p>{submitData}</p> */}
-      {submitData && <StudentTable data={submitData} />}
+      {/* {submitData && <StudentTable data={submitData} />} */}
     </div>
   );
 }

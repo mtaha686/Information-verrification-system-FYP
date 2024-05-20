@@ -10,15 +10,11 @@ const NavBar = () => {
           <img src={logo} alt="Logo" />
         </ul>
         <ul className="headers">
-          {/* <li className="links-header">
-            <Link to="/home">Home</Link>
-          </li> */}
-
           <li className="links-header">
             <Link to="/records">Records</Link>
           </li>
           <li className="links-header">
-            <Link to="/application">Application</Link>
+            <Link to="/">Application</Link>
           </li>
         </ul>
       </nav>

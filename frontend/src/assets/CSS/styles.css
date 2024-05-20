@@ -1,5 +1,3 @@
-/* styles.css */
-
 * {
   margin: 0;
   padding: 0;
@@ -28,8 +26,6 @@ body {
   background-color: var(--background-purple);
   padding: 10px 20px;
 }
-
-/* NavBar Styles */
 
 nav {
   display: flex;
@@ -60,14 +56,12 @@ nav {
   transform: scale(1.05);
 }
 
-/* HomePage Styles */
-
 .home-container {
   padding: 20px;
   height: 80vh;
   background-color: var(--background-purple);
 }
-/* HomePage */
+
 .intro-section {
   position: absolute;
   top: 10%;
@@ -76,6 +70,7 @@ nav {
   display: flex;
   justify-content: space-around;
 }
+
 .intro {
   margin-top: 2%;
   width: 38%;
@@ -84,6 +79,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
 .text-intro h1 {
   color: #ffffff;
   font-size: 4em;
@@ -92,12 +88,14 @@ nav {
   text-align: left;
   padding: 40px 40px 0 50px;
 }
+
 p {
   color: #ffffff;
   margin-top: 21px;
   font-weight: bold;
   padding-left: 50px;
 }
+
 .btn {
   width: max-content;
   height: max-content;
@@ -111,10 +109,12 @@ p {
   background: linear-gradient(90deg, #8c52ff, #00bf63);
   transition: background 0.3s ease;
 }
+
 .btn:hover {
   background: linear-gradient(90deg, #00bf63, #8c52ff);
   transform: scale(1.05);
 }
+
 .img-intro {
   border-radius: 80%;
   background-image: url("../images/dvs.png");
@@ -130,11 +130,10 @@ p {
   }
 }
 
-/* styles.css */
 .main-form-container {
   padding: 1px;
-  /* height: 70vh; */
 }
+
 .form-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -152,6 +151,7 @@ p {
   padding: 1px;
   padding: 3px;
 }
+
 .form-group label {
   font-weight: bold;
   font-size: 0.7em;
@@ -160,28 +160,32 @@ p {
   justify-content: space-between;
   color: var(--background-purple);
 }
+
 .form-group input,
 select {
   width: 100%;
   padding: 4px;
   border-radius: 2px;
   font-size: 16px;
-  /* color: var(--background-purple); */
   border: 1.5px solid var(--background-purple);
 }
+
 .form-group input:hover,
 .form-group input:focus {
   border-color: var(--background-purple);
   background-color: #e7eaf7;
 }
+
 .form-group input[type="select"] {
   border-color: var(--background-purple);
   color: #6787f8;
   background-color: #e7eaf7;
 }
+
 .form-group input[type="file"] {
   padding: 2px;
 }
+
 .text-danger {
   font-size: 0.5em;
   float: right;
@@ -189,11 +193,13 @@ select {
   margin-top: -15px;
   padding: 3px;
 }
+
 .message-of-input {
   padding: 0;
   margin: 0;
   font-size: 0.5 em;
 }
+
 .comparison-message {
   padding: 0;
   margin: 0;
@@ -201,7 +207,6 @@ select {
   font-weight: bold !important;
   color: red;
 }
-/* ButtonComponent.css */
 
 .buttonSubmit {
   text-align: center;
@@ -218,13 +223,12 @@ select {
   border: 2px solid var(--analogous);
   background-color: var(--analogous-color-1);
 }
+
 @media (max-width: 768px) {
   .form-container {
     grid-template-columns: 1fr;
   }
 }
-
-/* footer contaier */
 .footer-container {
   background-color: var(--background-purple);
   color: var(--white);
@@ -232,11 +236,27 @@ select {
   padding: 17px;
   bottom: 0;
   width: 100%;
-  /* position: fixed; */
+  position: unset;
+  left: 0;
 }
 
-/* StudentTable.css */
-/* styles.css */
+@media (max-width: 768px) {
+  .main-form-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .form-container {
+    flex: 1;
+  }
+
+  .footer-container {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+
 .sec2-data {
   color: #9757f8;
   font-weight: bold;
@@ -249,5 +269,4 @@ select {
 .sec2-lable {
   display: block;
   font-weight: normal;
-  /* color: blue; */
 }
