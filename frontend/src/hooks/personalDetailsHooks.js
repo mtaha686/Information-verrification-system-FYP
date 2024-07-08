@@ -35,5 +35,6 @@ export const usePersonalDetailsForm = () => {
     formData,
     handleInputChange,
     handleFileChange,
+    setFormData,
   };
 };

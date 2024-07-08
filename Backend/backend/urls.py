@@ -26,7 +26,6 @@ urlpatterns = [
          name='verify_personal_detail'),
     path('submit_personal_detail/', AddRecord.as_view(),
          name='submit_personal_detail'),
-
     path('get_personal_details/', ShowRecord.as_view(),
          name='get_personal_details'),
 ]

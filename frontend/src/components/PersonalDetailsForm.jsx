@@ -13,7 +13,26 @@ import SubmitButton from "./button";
 import { Alert } from "react-bootstrap";
 
 function PersonalDetailForm() {
-  const { formData, handleInputChange, handleFileChange } =
+  const initialFormData = {
+    name: "",
+    fatherName: "",
+    cnic: "",
+    dob: "",
+    cnicUpload: null,
+    sscObtained: "",
+    sscTotal: "",
+    ssc_py: "",
+    ssc_board: "",
+    ssc_rno: "",
+    sscUpload: null,
+    fscObtained: "",
+    fscTotal: "",
+    fsc_py: "",
+    fsc_board: "",
+    fsc_rno: "",
+    fscUpload: null,
+  };
+  const { formData, handleInputChange, handleFileChange, setFormData } =
     usePersonalDetailsForm();
   const [compData, setCompData] = useState(null);
   const [submitData, setSubmitData] = useState(null);
@@ -55,6 +74,7 @@ function PersonalDetailForm() {
 
       // Reset the form values
       setCompData(null); // Reset compData
+      setFormData(initialFormData);
     } catch (error) {
       console.error(error);
     }
