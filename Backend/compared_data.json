@@ -1,43 +1,43 @@
 {
   "card_data": {
-    "name": true,
-    "fname": true,
+    "name": false,
+    "fname": false,
     "dob": false,
-    "cnic_number": false
+    "cnic_number": true
   },
   "ssc_data": {
-    "name": true,
-    "fname": true,
-    "obtained": true,
-    "total": true,
-    "year": true,
-    "roll_no": true,
+    "name": false,
+    "fname": false,
+    "obtained": false,
+    "total": false,
+    "year": false,
+    "roll_no": false,
     "board": {
-      "board": "board",
+      "board": "False",
       "of": "of",
-      "intermediate": "intermediate",
-      "and": "and",
-      "secondary": "secondary",
-      "education": "education",
-      "rawalpindi": "rawalpindi"
+      "intermediate": "False",
+      "and": "False",
+      "secondary": "False",
+      "education": "False",
+      "rawalpindi": "False"
     }
   },
   "fsc_data": {
-    "name": true,
-    "fname": true,
-    "obtained": true,
-    "total": true,
-    "year": true,
-    "roll_no": true,
+    "name": false,
+    "fname": false,
+    "obtained": false,
+    "total": false,
+    "year": false,
+    "roll_no": false,
     "board": {
       "federal": "False",
-      "board": "board",
+      "board": "False",
       "of": "of",
-      "intermediate": "intermediate",
-      "and": "and",
-      "secondary": "secondary",
-      "education": "education",
-      "islamabad": "islamabad"
+      "intermediate": "False",
+      "and": "False",
+      "secondary": "False",
+      "education": "False",
+      "islamabad": "False"
     }
   }
 }
